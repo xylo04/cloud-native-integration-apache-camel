@@ -5,26 +5,26 @@ import javax.persistence.*;
 @Entity
 public class Fruit {
 
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    public Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  public Integer id;
 
-    @Column(unique = true)
-    public String name;
+  @Column(unique = true)
+  public String name;
 
-    public Integer getId() {
-        return id;
-    }
+  public Integer getId() {
+    return id;
+  }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 }

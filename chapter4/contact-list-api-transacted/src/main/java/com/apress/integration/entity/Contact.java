@@ -8,16 +8,14 @@ import javax.persistence.Id;
 @Entity
 public class Contact {
 
-    @Id
-    @GeneratedValue
-    public Integer id;
+  @Id @GeneratedValue public Integer id;
 
-    @Column(unique = true)
-    public String name;
-    public String email;
-    public String phone;
-    public String company;
+  @Column(unique = true)
+  public String name;
 
-    public Contact() { }
+  public String email;
+  public String phone;
+  public String company;
 
+  public Contact() {}
 }
