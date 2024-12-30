@@ -10,6 +10,7 @@ import org.apache.camel.TypeConverters;
 public class MyObjectConverter implements TypeConverters {
 
   @Converter
+  @SuppressWarnings("unused")
   public static AnotherObject toAnotherObject(MyObject object) {
 
     AnotherObject anotherObject = new AnotherObject();
