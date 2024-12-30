@@ -12,6 +12,12 @@ public class FileReaderBean {
 
   private static final Logger LOG = Logger.getLogger(FileReaderBean.class);
 
+  public static String getServerDirURI() throws URISyntaxException {
+    return Paths.get(FileReaderBean.class.getResource("/").toURI()).getParent()
+        + "/camel-file-rest-dir";
+  }
+
+  @SuppressWarnings("unused")
   public void listFile(Exchange exchange) throws URISyntaxException {
 
     File serverDir = new File(getServerDirURI());
@@ -33,10 +39,5 @@ public class FileReaderBean {
     } else {
       LOG.info("no files created yet");
     }
-  }
-
-  public static String getServerDirURI() throws URISyntaxException {
-    return Paths.get(FileReaderBean.class.getResource("/").toURI()).getParent()
-        + "/camel-file-rest-dir";
   }
 }
